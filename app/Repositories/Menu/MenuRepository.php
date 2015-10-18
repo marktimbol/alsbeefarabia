@@ -10,7 +10,7 @@ class MenuRepository implements MenuRepositoryInterface {
 	
 	public function all() {
 
-		return Menu::with('categories')->latest()->get();
+		return Menu::with('categories')->latest()->paginate(15);
 	
 	}
 

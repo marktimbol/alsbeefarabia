@@ -64,6 +64,8 @@
 					@endforelse
 				</tbody>
 			</table>
+
+			{!! $menus->render() !!}
 			
 		</div>
 
