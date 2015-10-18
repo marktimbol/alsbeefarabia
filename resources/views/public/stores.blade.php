@@ -60,6 +60,7 @@
 				<?php $count++; ?>
 			@empty
 
+				<h4>No Stores available.</h4>
 
 			@endforelse
 
