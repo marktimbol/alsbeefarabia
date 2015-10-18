@@ -1,0 +1,30 @@
+.dropzone {
+	border-style: dashed !important;
+}
+
+.navbar-inverse {
+	background-color: black !important;
+}
+
+.side-nav {
+	background-color: $yellow !important;
+
+	li {
+		border-bottom: 1px solid $darkYellow;
+		a {
+			color: black !important;
+			&:hover {
+				background-color: $darkYellow !important;
+			}
+		}
+
+		&.active {
+			a {
+				color: black !important;
+				background-color: $yellow !important;				
+			}
+		}
+
+
+	}
+}

@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: 'clarenBold';
+    src: url('../../fonts/clarendon-bt-bold_10893-webfont.eot');
+    src: url('../../fonts/clarendon-bt-bold_10893-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/clarendon-bt-bold_10893-webfont.woff2') format('woff2'),
+         url('../../fonts/clarendon-bt-bold_10893-webfont.woff') format('woff'),
+         url('../../fonts/clarendon-bt-bold_10893-webfont.ttf') format('truetype'),
+         url('../../fonts/clarendon-bt-bold_10893-webfont.svg#clarendon_btbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+$mainFont: 'Open Sans';
+$clarenBold: 'clarenBold';

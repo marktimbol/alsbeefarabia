@@ -1,0 +1,55 @@
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.block {
+	display: block;
+}
+
+
+.p-r-0 {
+	padding-right: 0;
+}
+
+.p-l-0 {
+	padding-left: 0;
+}
+
+.store {
+
+	&.left {
+		.p-r-0 {
+			padding-right: 0;
+		}
+
+		.p-l-0 {
+			padding-left: 0;
+		}
+
+		.store__info {
+			.col {
+				padding: 70px;
+			}
+		}
+	}
+
+	&.right {
+		.p-r-0 {
+			padding-left: 0;
+		}
+
+		.p-l-0 {
+			padding-right: 0;
+		}
+
+		.store__info {
+			.col {
+    			padding: 70px 115px;				
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+hr {
+	border-top: 1px solid #ddd;
+}
+
+.btn {
+	border-radius: 3px;
+	&.btn-black {
+		background: black;
+		color: white;
+		&:hover {
+			background: #222;
+		}
+	}
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url('../../images/icons/grabbing.png') 8 8, move !important;
+}
+
+table {
+	&.table-bordered {
+		border: 1px solid #333;
+		tr {
+			th {
+				text-transform: uppercase;
+			}
+			th, td {
+				border: 1px solid #333;
+				vertical-align: middle;	
+			}
+		}
+	}
+}
+
+#als-slide {
+	.item {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;			
+		}
+	}
+}
+
+.cbp-ntaccordion {
+	h3 {
+		a {
+			color: black;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
