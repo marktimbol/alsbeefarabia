@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	<hr />
+{{-- 	<hr />
 	
 	<div class="row">
 
@@ -43,7 +43,7 @@
 		<div class="col-md-4">
 			<img src="http://placehold.it/500x140" alt="" title="" class="img-responsive" />
 		</div>
-	</div>	
+	</div>	 --}}
 
 @endsection
 
