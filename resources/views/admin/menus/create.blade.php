@@ -67,8 +67,7 @@
 										<div class="radio">
 											<label>
 												<input type="radio" name="category" 
-														value="{{ $category->id }}"
-														{{ $category->id == '1' ? 'checked' : '' }} />
+														value="{{ $category->id }}" />
 												{{ $category->name }}
 											</label>
 										</div>
