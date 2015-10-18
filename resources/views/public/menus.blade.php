@@ -39,7 +39,7 @@
 
 					@foreach( $category_chunks as $category )
 
-						<div class="col-md-2">
+						<div class="col-md-2 col-xs-4">
 							
 							<figure class="wow fadeInLeft" data-wow-delay="0.{{$category->id+1}}s">
 								
