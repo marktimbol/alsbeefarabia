@@ -32,17 +32,16 @@
 		
 		<div class="col-md-12">
 
-			<div class="als-menu">
+			<div class="menus">
 
-				@forelse( $category->menus->chunk(6) as $menus)
+				<div class="row">
 
-					<div class="row row-eq-height">
+					@forelse( $category->menus as $menu)
 
-						@foreach($menus as $menu)
+					
+						<div class="col col-md-3">
 
-						<div class="col-md-2">
-
-							<figure class="wow fadeInLeft" data-wow-delay="0.{{$menu->id+1}}s">
+							<figure class="menus__menu wow fadeInLeft" data-wow-delay="0.{{$menu->id+1}}s">
 
 								<a href="{{ route('menu', $menu->slug) }}">&nbsp;</a>
 							
@@ -50,7 +49,7 @@
 							
 								<figcaption>
 							
-									<h4 class="text-muted">{{ $menu->name }}</h4>
+									<h4 class="menu__name text-muted">{{ $menu->name }}</h4>
 							
 								</figcaption>	
 							
@@ -58,16 +57,13 @@
 							
 						</div>
 						
-						@endforeach
 
-					</div>
-
-				@empty
+					@empty
 
 
-
-				@endforelse
+					@endforelse
 				
+				</div>
 			</div>				
 
 		</div>

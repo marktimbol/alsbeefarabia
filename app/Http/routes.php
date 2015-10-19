@@ -1,5 +1,17 @@
 <?php
 
+get('test', function() {
+
+    $admin = [
+        'email' => env('MAIL_FROM_ADDRESS')
+    ];
+
+    $admin = (object) $admin;
+
+    dd($admin->email);
+
+});
+
 Route::bind('category', function($category) {
 	return App\Category::with('menus')->whereSlug($category)->firstOrFail();
 });
@@ -15,10 +27,6 @@ Route::get('/menu/{category}', ['as' => 'menusByCategory', 'uses' => 'PagesContr
 Route::get('/menu/details/{menu}', ['as' => 'menu', 'uses' => 'PagesController@menu']);
 
 Route::get('/stores', ['as' => 'stores', 'uses' => 'PagesController@stores']);
-
-Route::get('/franchise', ['as' => 'franchise', 'uses' => 'PagesController@franchise']);
-Route::get('/franchise/apply', ['as' => 'franchise-application', 'uses' => 'PagesController@franchiseApplication']);
-Route::post('/franchise/apply', 'PagesController@submitFranchiseApplication');
 
 Route::get('/about-us', ['as' => 'about', 'uses' => 'PagesController@about']);
 Route::get('/contact-us', ['as' => 'contact', 'uses' => 'PagesController@contact']);

@@ -29,7 +29,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row m-t-50">
 
 		<div class="col-md-4 wow fadeInLeft" data-wow-delay="0.2s">
 			

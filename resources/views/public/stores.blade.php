@@ -11,59 +11,62 @@
 		<div class="col-md-12">
 			<h2 class="pageTitle">Stores</h2>
 
-			<?php $count = 1; ?>
-			
-			@forelse( $stores->chunk(1) as $chunks )
+			<div class="stores">
 
-				<div class="row store {{ $count % 2 <> 0 ? 'left' : 'right' }}">
-
-					@foreach($chunks as $store )
+				<?php $count = 1; ?>
 				
-						<div class="store__photo">
+				@forelse( $stores->chunk(1) as $chunks )
 
-							<div class="col-md-6 col p-r-0">
+					<div class="row store {{ $count % 2 <> 0 ? 'left' : 'right' }}">
+
+						@foreach($chunks as $store )
 					
-							{!! display($store->photos) !!}
-					
+							<div class="store__photo wow fadeInLeft">
+
+								<div class="col-md-6 col p-r-0">
+						
+								{!! display($store->photos) !!}
+						
+								</div>
+
 							</div>
 
-						</div>
+							<div class="store__info wow fadeInRight">
+							
+								<div class="col-md-6 col p-l-0">
+							
+									<h3>{{ $store->name }}</h3>
 
-						<div class="store__info">
-						
-							<div class="col-md-6 col p-l-0">
-						
-								<h3>{{ $store->name }}</h3>
+									{!! $store->description !!}
 
-								{!! $store->description !!}
+									<ul>
+										<li>
+											<i class="fa fa-map-marker"></i>
+											{{ $store->address }}
+										</li>
 
-								<ul>
-									<li>
-										<i class="fa fa-map-marker"></i>
-										{{ $store->address }}
-									</li>
+										<li>
+											<i class="fa fa-phone"></i>
+											{{ $store->contact }}
+										</li>																		
+									</ul>
+								</div>
+							
+							</div>							
 
-									<li>
-										<i class="fa fa-phone"></i>
-										{{ $store->contact }}
-									</li>																		
-								</ul>
-							</div>
-						
-						</div>							
+						@endforeach
 
-					@endforeach
+					</div>
+				
 
-				</div>
-			
+					<?php $count++; ?>
+				@empty
 
-				<?php $count++; ?>
-			@empty
+					<h4>Opening soon in Jumeirah.</h4>
 
-				<h4>No Stores available.</h4>
+				@endforelse
 
-			@endforelse
-
+			</div>
 		
 		</div>
 

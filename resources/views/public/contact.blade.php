@@ -2,6 +2,10 @@
 
 @section('pageTitle', 'Contact Us')
 
+@section('header_styles')
+    <link rel="stylesheet" href="{{ elixir('css/sweetalert.css') }}" />
+@endsection
+
 @section('bodyClass', 'page')
 
 @section('content')
@@ -25,28 +29,28 @@
 
 				<div class="form-group">
 					<label for="name">Name</label>
-					<input type="text" name="name" id="name" class="form-control" value="{{ old('name') }}" placeholder="First Name, Last Name" />
+					<input type="text" name="name" id="name" class="form-control" value="{{ old('name') }}" placeholder="First Name, Last Name" required />
 				</div>
 
 				<div class="form-group">
 					<label for="phone">Phone</label>
-					<input type="text" name="phone" id="phone" class="form-control" value="{{ old('phone') }}" placeholder="+971 00 000 0000" />
+					<input type="text" name="phone" id="phone" class="form-control" value="{{ old('phone') }}" placeholder="+971 00 000 0000" required />
 				</div>					
 
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" placeholder="your@email.com" />
+					<input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" placeholder="your@email.com" required />
 				</div>
 
 
 				<div class="form-group">
 					<label for="message">Message</label>
-					<textarea name="message" id="message" class="form-control" rows="10"></textarea>
+					<textarea name="message_content" id="message" class="form-control" rows="10" required></textarea>
 				</div>
 				
 
 				<div class="form-group">
-					<button type="submit" name="submit" class="btn btn-black btn-lg">Send Inquiry</button>
+					<button type="submit" class="btn btn-black btn-lg">Send Inquiry</button>
 				</div>																																														
 			</form>
 		</div>
@@ -56,4 +60,8 @@
 
 
 
+@endsection
+
+@section('footer_scripts')
+    <script src="{{ elixir('js/sweetalert.js') }}"></script>
 @endsection

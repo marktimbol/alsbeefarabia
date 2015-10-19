@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\ApplicationFormRequest;
+use App\Http\Requests\ContactFormRequest;
 use App\Mailers\AdminMailer;
 use App\Repositories\Category\CategoryRepositoryInterface;
 use App\Repositories\Slide\SlideRepositoryInterface;
@@ -66,8 +67,6 @@ class PagesController extends Controller
 
         $categories = $this->category->all();
 
-        
-
         return view('public.menus', compact('categories'));
 
     }
@@ -97,28 +96,17 @@ class PagesController extends Controller
 
     }
 
-    public function submitContact(Request $request) {
-        return 'Process information here.';
-    }
-
-
-    public function franchiseApplication() {
-
-        return view('public.franchise-application');
-
-    }
-
-    public function submitFranchiseApplication(ApplicationFormRequest $request) {
+    public function submitContact(ContactFormRequest $request) {
         
-        $admin = $this->user->find(1);
+        $admin = env('MAIL_FROM_ADDRESS');
 
-        $userData = $this->user->store($request->all());
+        $userData = $request->all();
 
-        $this->mailer->franchiseApplication($admin, $userData);
+        $this->mailer->contact($admin, $userData);
 
-        flash()->overlay('Yeys!', 'Thank you for submitting a franchise application. We will contact you shortly.');
+        flash()->overlay('Yeys!', 'Thank you for contacting us. We will contact you shortly.');
 
-        return redirect()->back();
-        
+        return redirect()->route('contact');   
+
     }
 }

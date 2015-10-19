@@ -15,14 +15,4 @@ class UserMailer extends Mailer {
 		$this->sendTo($user, $subject, $view, $data);
 
 	}
-
-	public function franchiseApplication(User $user) {
-
-		$subject = 'Franchise Application Form';
-		$view = 'emails.franchise-application';
-		$data = [];
-
-		$this->sendTo($user, $subject, $view, $data);
-
-	}
 }

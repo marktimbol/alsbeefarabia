@@ -33,37 +33,31 @@
 		
 			<h2 class="pageTitle">Menus</h2>
 
-			@foreach($categories->chunk(6) as $category_chunks)
+			<div class="menus">
 
-				<div class="row row-eq-height">
+				@foreach($categories as $category)
 
-					@foreach( $category_chunks as $category )
-
-						<div class="col-md-2 col-xs-4">
-							
-							<figure class="wow fadeInLeft" data-wow-delay="0.{{$category->id+1}}s">
-								
-								<a href="{{ route('menusByCategory', $category->slug) }}"></a>
-
-								{!! display($category->photos) !!}
-
-								<figcaption>
-
-									<h4 class="text-muted">{{ $category->name }}</h4>
-								
-								</figcaption>
-
-							</figure>
+					<div class="col col-md-3 col-xs-4">
 						
-						</div>
+						<figure class="menus__menu wow fadeInLeft" data-wow-delay="0.{{$category->id+1}}s">
+							
+							<a href="{{ route('menusByCategory', $category->slug) }}"></a>
 
-					@endforeach
+							{!! display($category->photos) !!}
 
-				</div>
-	
-			@endforeach
+							<figcaption>
 
-			
+								<h4 class="menu__name text-muted">{{ $category->name }}</h4>
+							
+							</figcaption>
+
+						</figure>
+					
+					</div>
+
+				@endforeach
+
+			</div>
 
 		</div>
 	</div>

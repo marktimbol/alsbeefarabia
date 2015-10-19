@@ -4,7 +4,7 @@
 			<div class="col-md-2">
 				<h1>
 					<a href="{{ route('home') }}">
-						<img src="{{ asset('images/logo.png') }}" alt="" title="" />
+						<img src="{{ asset('images/logo.png') }}" width="113" height="98" alt="Al's Beef Arabia" title="Al's Beef Arabia" />
 					</a>
 				</h1>
 			</div>

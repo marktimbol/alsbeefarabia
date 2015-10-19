@@ -128,49 +128,61 @@ nav {
     margin-top: -63px;
     margin-left: 26px;	
 
-    .row {
-    	&.row-eq-height {
+	.featured-details {
+		h1 {
+			color: #333;
+			font-family: $clarenBold;
+			text-transform: uppercase;
+			margin-top: 100px;
+			margin-bottom: 50px;
+		}
+
+		h2 {
+			font-size: 24px;
+		}
+
+		img {
+			margin-top: 50px;
+		}
+
+	}
+	
+    .menus {
+    	
+    	.col {
     		margin-bottom: 50px;
-    		.col-md-2 {
-				position: relative;    
 
-				figure {
-					margin-bottom: 20px;
-
-					a {
-						position: absolute;
-						display: block;
-						width: 100%;
-						height: 100%;
-						top: 0;
-						left: 0;
-						&:hover {
-							text-decoration: none;
-							
-						}				
-					}
-
-					img {
-						&:hover {
-
-						}
-					}
-
-					figcaption {
-						h4 {
-							font-size: 12px;
-							text-align: center;
-							position: absolute;
-							bottom: 0px;
-							width: 100%;
-							left: 0;
-						}
-					}
-				}								
-    		}
     	}
 
-    	&.store {
+		.menus__menu {
+			margin-bottom: 20px;
+			height: 160px;
+
+			a {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				&:hover {
+					text-decoration: none;
+					
+				}				
+			}
+
+			.menu__name {
+				font-size: 12px;
+				text-align: center;
+			}
+		}								
+    		
+    }
+
+    .stores {
+
+
+    	.store {
 
 			.store__info {
 
@@ -206,30 +218,9 @@ nav {
 			}
 
     	}
-    }
 
-
-	.featured-details {
-		h1 {
-			color: #333;
-			font-family: $clarenBold;
-			text-transform: uppercase;
-			margin-top: 100px;
-			margin-bottom: 50px;
-		}
-
-		h2 {
-			font-size: 24px;
-		}
-
-		img {
-			margin-top: 50px;
-		}
-
-	}
-
-
-
+     }
+   
 
 }
 
