@@ -39,7 +39,7 @@
 					@forelse( $category->menus as $menu)
 
 					
-						<div class="col col-md-3">
+						<div class="col col-md-3 col-xs-4">
 
 							<figure class="menus__menu wow fadeInLeft" data-wow-delay="0.{{$menu->id+1}}s">
 
