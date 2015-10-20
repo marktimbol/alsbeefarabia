@@ -1,25 +1,5 @@
 <?php
 
-get('test', function() {
-
-    $admin = [
-        'email' => env('MAIL_FROM_ADDRESS')
-    ];
-
-    $admin = (object) $admin;
-
-    dd($admin->email);
-
-});
-
-Route::bind('category', function($category) {
-	return App\Category::with('menus')->whereSlug($category)->firstOrFail();
-});
-
-Route::bind('menu', function($menu) {
-	return App\Menu::with('categories')->whereSlug($menu)->firstOrFail();
-});
-
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
 Route::get('/menus', ['as' => 'menus', 'uses' => 'PagesController@menus']);
@@ -50,25 +30,11 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 /*=== ADMIN ROUTES ===*/
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-
-	Route::bind('categories', function($categories) {
-		return App\Category::with('menus')->findOrFail($categories);
-	});
-
-	Route::bind('menus', function($menus) {
-		return App\Menu::with('categories')->findOrFail($menus);
-	});	
-
-	Route::bind('stores', function($stores) {
-		return App\Store::with('photos')->findOrFail($stores);
-	});		
-
-	Route::bind('slides', function($slides) {
-		return App\Slide::with('photos')->findOrFail($slides);
-	});		
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {	
 	
 	Route::get('/', ['as' => 'admin', 'uses' => 'Admin\AdminController@home']);
+
+	Route::controller('/filemanager','Admin\FilemanagerController');
 
 	Route::put('categories/photos/upload', [
 				'as' => 'admin.categories.photos.upload', 

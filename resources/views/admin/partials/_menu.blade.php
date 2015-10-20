@@ -12,7 +12,8 @@
 
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            	<i class="fa fa-user"></i> {{ $currentUser->name }} <b class="caret"></b></a>
+            	<i class="fa fa-user"></i> {{ $currentUser->name }} <b class="caret"></b>
+            </a>
             <ul class="dropdown-menu">
                 <li>
                     <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -51,6 +52,12 @@
                     <i class="fa fa-sliders"></i> Slides
                 </a>
             </li>  
+
+            <li>
+                <a href="{{ url('admin/filemanager') }}">
+                    <i class="fa fa-image"></i> Media
+                </a>
+            </li>              
 
 
             

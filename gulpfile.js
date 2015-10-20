@@ -47,6 +47,10 @@ elixir(function(mix) {
             'accordion.js'
             ], 'public/js/accordion.js')
 
+        .scripts([
+            'admin/filemanager.js',
+            ], 'public/js/filemanager.js')
+
 
     /*=== ADMIN SCRIPTS ===*/
 
@@ -87,7 +91,8 @@ elixir(function(mix) {
             /*=== ADMIN ===*/
 
             'css/admin.css',
-            'js/admin.js'
+            'js/admin.js',
+            'js/filemanager.js'
 
             ]);
 });

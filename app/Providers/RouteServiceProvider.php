@@ -2,8 +2,13 @@
 
 namespace App\Providers;
 
-use Illuminate\Routing\Router;
+use App\Category;
+use App\Menu;
+use App\Slide;
+use App\Store;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -24,7 +29,30 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        //
+
+        Route::bind('category', function($category) {
+            return Category::with('menus')->whereSlug($category)->firstOrFail();
+        });
+
+        Route::bind('menu', function($menu) {
+            return Menu::with('categories')->whereSlug($menu)->firstOrFail();
+        });
+
+        Route::bind('categories', function($categories) {
+            return Category::with('menus')->findOrFail($categories);
+        });
+
+        Route::bind('menus', function($menus) {
+            return Menu::with('categories')->findOrFail($menus);
+        }); 
+
+        Route::bind('stores', function($stores) {
+            return Store::with('photos')->findOrFail($stores);
+        });     
+
+        Route::bind('slides', function($slides) {
+            return Slide::with('photos')->findOrFail($slides);
+        }); 
 
         parent::boot($router);
     }
