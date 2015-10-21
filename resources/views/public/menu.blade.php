@@ -43,7 +43,7 @@
 
 							<figure class="menus__menu wow fadeInLeft" data-wow-delay="0.{{$menu->id+1}}s">
 
-								<a href="{{ route('menu', $menu->slug) }}">&nbsp;</a>
+								<a href="{{ route('menu', [$category->slug, $menu->slug]) }}">&nbsp;</a>
 							
 								{!! display($menu->photos) !!}
 							

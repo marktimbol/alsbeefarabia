@@ -77,8 +77,9 @@ class PagesController extends Controller
 
     }
 
-    public function menu($menu) {
-        
+    public function menu($category, $menu) {
+            
+     
         return view('public.menu-details', compact('menu'));
 
     }

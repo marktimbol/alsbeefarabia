@@ -4,7 +4,7 @@ Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
 Route::get('/menus', ['as' => 'menus', 'uses' => 'PagesController@menus']);
 Route::get('/menu/{category}', ['as' => 'menusByCategory', 'uses' => 'PagesController@menusByCategory']);
-Route::get('/menu/details/{menu}', ['as' => 'menu', 'uses' => 'PagesController@menu']);
+Route::get('/menu/{category}/{menu}', ['as' => 'menu', 'uses' => 'PagesController@menu']);
 
 Route::get('/stores', ['as' => 'stores', 'uses' => 'PagesController@stores']);
 
