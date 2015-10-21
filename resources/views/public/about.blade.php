@@ -53,4 +53,6 @@
 	</div>
 
 
+	@include('public.partials._footer')	
+
 @endsection
