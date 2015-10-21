@@ -1,5 +1,9 @@
 <?php
 
+Route::post('queue/receive', function() {
+    return Queue::marshal();
+});
+
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
 Route::get('/menus', ['as' => 'menus', 'uses' => 'PagesController@menus']);
