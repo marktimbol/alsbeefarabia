@@ -33,7 +33,10 @@ class SendUserInformationToAdmin extends Job implements SelfHandling, ShouldQueu
         $this->name = $name;
         $this->phone = $phone;
         $this->email = $email;
-        $this->message = $message_content;      
+        $this->message = $message_content;   
+
+        $this->handle(new AdminMailer);
+
     }
 
     /**
@@ -43,6 +46,7 @@ class SendUserInformationToAdmin extends Job implements SelfHandling, ShouldQueu
      */
     public function handle(AdminMailer $mailer)
     {
+
         $user = [
             'name'  => $this->name,
             'phone' => $this->phone,
