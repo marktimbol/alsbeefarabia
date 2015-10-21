@@ -4,7 +4,7 @@ function BrowseServer(obj)
 {
     urlobj = obj;
     OpenServerBrowser(
-          'http://localhost:8000/filemanager',
+          'http://alsbeefarabia.dev/admin/filemanager',
           screen.width * 0.7,
           screen.height * 0.7
       ) ;
@@ -28,7 +28,7 @@ function setData( data )
 
       image = data[0];
       
-      document.getElementById(urlobj).value = image.url.replace("http://localhost:8000/github/filemanagertest/laravel/public/userfiles/", "");
+      document.getElementById(urlobj).value = image.url;
   }
   oWindow = null;
 }

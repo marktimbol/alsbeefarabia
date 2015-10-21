@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\ApplicationFormRequest;
 use App\Http\Requests\ContactFormRequest;
-use App\Mailers\AdminMailer;
+use App\Jobs\SendUserInformationToAdmin;
 use App\Repositories\Category\CategoryRepositoryInterface;
 use App\Repositories\Slide\SlideRepositoryInterface;
 use App\Repositories\Store\StoreRepositoryInterface;
@@ -24,21 +24,17 @@ class PagesController extends Controller
 
     protected $store;
 
-    protected $mailer;
-
 
     public function __construct(
         UserRepositoryInterface $user,
         CategoryRepositoryInterface $category,
         SlideRepositoryInterface $slide,
-        StoreRepositoryInterface $store,
-        AdminMailer $mailer)
+        StoreRepositoryInterface $store)
     {
         $this->user = $user;
         $this->category = $category;
         $this->slide = $slide;
         $this->store = $store;
-        $this->mailer = $mailer;
     }
 
     public function home() {
@@ -99,11 +95,7 @@ class PagesController extends Controller
 
     public function submitContact(ContactFormRequest $request) {
         
-        $admin = env('MAIL_FROM_ADDRESS');
-
-        $userData = $request->all();
-
-        $this->mailer->contact($admin, $userData);
+        $this->dispatchFrom(SendUserInformationToAdmin::class, $request);
 
         flash()->overlay('Yeys!', 'Thank you for contacting us. We will contact you shortly.');
 

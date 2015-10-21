@@ -47,6 +47,17 @@
 
 					<div class="panel panel-primary">
 						<div class="panel-heading">
+							<h3 class="panel-title">Set Featured Image</h3>
+						</div>					
+						<div class="panel-body">
+							<button type="button" class="btn" onclick="BrowseServer('selectedImage');">Browse Image</button>
+
+							<input id="selectedImage" />
+						</div>
+					</div>
+
+					<div class="panel panel-primary">
+						<div class="panel-heading">
 							<h3 class="panel-title">Upload Photo</h3>
 						</div>					
 						<div class="panel-body">
@@ -77,4 +88,6 @@
 		   ['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source']
 		] ;
 	</script>
+
+	<script src="{{ elixir('js/filemanager.js') }}"></script>
 @endsection
