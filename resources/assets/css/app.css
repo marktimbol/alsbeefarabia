@@ -6072,7 +6072,7 @@ body {
   font-size: 13px;
   background: black; }
   body.page {
-    background: #EAEBED; }
+    background: url("../../images/restaurant_icons.png") repeat; }
     body.page .als-main-content {
       margin-left: 46px; }
     body.page .social-icons a {
