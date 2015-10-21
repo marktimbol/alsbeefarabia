@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c48087c6de607f4ad59ea8cb2bd2529",
+    "hash": "b86719a10d12a2c3e5c23d6fbf146177",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -524,16 +524,16 @@
         },
         {
             "name": "iron-io/iron_mq",
-            "version": "1.5.3",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_mq_php.git",
-                "reference": "90e796570f61b6e63b44296d7300747c51833b92"
+                "reference": "ddb10b72f2e3255d6df71a5192a46103bc211550"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/90e796570f61b6e63b44296d7300747c51833b92",
-                "reference": "90e796570f61b6e63b44296d7300747c51833b92",
+                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/ddb10b72f2e3255d6df71a5192a46103bc211550",
+                "reference": "ddb10b72f2e3255d6df71a5192a46103bc211550",
                 "shasum": ""
             },
             "require": {
@@ -565,7 +565,7 @@
                 "iron",
                 "iron_mq"
             ],
-            "time": "2015-02-12 15:38:54"
+            "time": "2015-05-01 09:37:21"
         },
         {
             "name": "jakub-onderka/php-console-color",
