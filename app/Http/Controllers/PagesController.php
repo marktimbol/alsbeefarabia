@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-use App\Http\Requests\ApplicationFormRequest;
 use App\Http\Requests\ContactFormRequest;
 use App\Jobs\SendUserInformationToAdmin;
 use App\Repositories\Category\CategoryRepositoryInterface;
