@@ -94,7 +94,7 @@ class PagesController extends Controller
 
     public function submitContact(ContactFormRequest $request) {
 
-        $this->dispatch( new SendUserInformationToAdmin($request->name, $request->phone, $request->email, $request->message_content) );
+        $this->dispatchFrom( SendUserInformationToAdmin::class, $request);
 
         flash()->overlay('Yeys!', 'Thank you for contacting us. We will contact you shortly.');
 
