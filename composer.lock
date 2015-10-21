@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fddcca16e265d2661334e809f64e0792",
+    "hash": "e4f1d52830d9b83166e8e409a2f3f7df",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -528,27 +528,21 @@
         },
         {
             "name": "iron-io/iron_mq",
-            "version": "4.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_mq_php.git",
-                "reference": "3302ad9be1a532ed2e413a082e251ed128816f37"
+                "reference": "9906a59885c8b715ac77346b1538a8a1c60300e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/3302ad9be1a532ed2e413a082e251ed128816f37",
-                "reference": "3302ad9be1a532ed2e413a082e251ed128816f37",
+                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/9906a59885c8b715ac77346b1538a8a1c60300e1",
+                "reference": "9906a59885c8b715ac77346b1538a8a1c60300e1",
                 "shasum": ""
             },
             "require": {
                 "iron-io/iron_core": "1.*",
                 "php": ">=5.2.0"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "~1.5",
-                "phpmd/phpmd": "~2.2",
-                "phpunit/phpunit": "4.6.*",
-                "squizlabs/php_codesniffer": "~2.3"
             },
             "type": "library",
             "autoload": {
@@ -566,6 +560,10 @@
                     "email": "alexander@iron.io",
                     "homepage": "http://iron.io",
                     "role": "Developer"
+                },
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me"
                 }
             ],
             "description": "Client binding for IronMQ (hosted message queue)",
@@ -575,7 +573,7 @@
                 "iron",
                 "iron_mq"
             ],
-            "time": "2015-07-23 21:55:36"
+            "time": "2015-02-12 20:05:42"
         },
         {
             "name": "jakub-onderka/php-console-color",
