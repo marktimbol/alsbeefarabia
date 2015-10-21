@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b86719a10d12a2c3e5c23d6fbf146177",
+    "hash": "fddcca16e265d2661334e809f64e0792",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -475,16 +475,16 @@
         },
         {
             "name": "iron-io/iron_core",
-            "version": "0.2.3",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_core_php.git",
-                "reference": "bcc721271d589cd787f569b1b69e2a3bcd2b1e22"
+                "reference": "650565e8ef855c53e6a9a3099fb22b76778a81a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_core_php/zipball/bcc721271d589cd787f569b1b69e2a3bcd2b1e22",
-                "reference": "bcc721271d589cd787f569b1b69e2a3bcd2b1e22",
+                "url": "https://api.github.com/repos/iron-io/iron_core_php/zipball/650565e8ef855c53e6a9a3099fb22b76778a81a8",
+                "reference": "650565e8ef855c53e6a9a3099fb22b76778a81a8",
                 "shasum": ""
             },
             "require": {
@@ -492,9 +492,9 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "IronCore.class.php"
-                ]
+                "psr-4": {
+                    "IronCore\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -512,6 +512,10 @@
                     "email": "support@iron.io",
                     "homepage": "http://iron.io",
                     "role": "Developer"
+                },
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me"
                 }
             ],
             "description": "Collection of common functions for all iron.io client libraries",
@@ -520,31 +524,37 @@
                 "iron",
                 "iron_core"
             ],
-            "time": "2015-04-23 14:37:42"
+            "time": "2015-02-12 19:54:09"
         },
         {
             "name": "iron-io/iron_mq",
-            "version": "3.0.3",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_mq_php.git",
-                "reference": "ddb10b72f2e3255d6df71a5192a46103bc211550"
+                "reference": "3302ad9be1a532ed2e413a082e251ed128816f37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/ddb10b72f2e3255d6df71a5192a46103bc211550",
-                "reference": "ddb10b72f2e3255d6df71a5192a46103bc211550",
+                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/3302ad9be1a532ed2e413a082e251ed128816f37",
+                "reference": "3302ad9be1a532ed2e413a082e251ed128816f37",
                 "shasum": ""
             },
             "require": {
-                "iron-io/iron_core": "0.*",
+                "iron-io/iron_core": "1.*",
                 "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1.5",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/phpunit": "4.6.*",
+                "squizlabs/php_codesniffer": "~2.3"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "IronMQ.class.php"
-                ]
+                "psr-4": {
+                    "IronMQ\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -565,7 +575,7 @@
                 "iron",
                 "iron_mq"
             ],
-            "time": "2015-05-01 09:37:21"
+            "time": "2015-07-23 21:55:36"
         },
         {
             "name": "jakub-onderka/php-console-color",
