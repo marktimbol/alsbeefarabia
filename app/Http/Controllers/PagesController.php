@@ -11,6 +11,7 @@ use App\Repositories\Slide\SlideRepositoryInterface;
 use App\Repositories\Store\StoreRepositoryInterface;
 use App\Repositories\User\UserRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Queue;
 
 class PagesController extends Controller
 {
@@ -74,7 +75,6 @@ class PagesController extends Controller
 
     public function menu($category, $menu) {
             
-     
         return view('public.menu-details', compact('menu'));
 
     }
@@ -93,8 +93,13 @@ class PagesController extends Controller
     }
 
     public function submitContact(ContactFormRequest $request) {
+    
+        Queue::push(function(){
+
+            $this->dispatchFrom(SendUserInformationToAdmin::class, $request);
         
-        $this->dispatchFrom(SendUserInformationToAdmin::class, $request);
+        });
+        
 
         flash()->overlay('Yeys!', 'Thank you for contacting us. We will contact you shortly.');
 
