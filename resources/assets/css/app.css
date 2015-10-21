@@ -6077,6 +6077,11 @@ body {
       margin-left: 46px; }
     body.page .social-icons a {
       color: #333; }
+  body.not-found .als-main-content {
+    margin-top: 0; }
+  body.not-found .not-found__title {
+    font-size: 40px;
+    font-weight: 300; }
 
 .row-eq-height {
   display: -webkit-flex;
