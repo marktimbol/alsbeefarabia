@@ -25,11 +25,18 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-1">
+				<div class="col-md-2 col-xs-12">
+					<div class="logo">
+						<h1>
+							<a href="{{ route('home') }}">
+								<img src="{{ asset('images/logo.png') }}" width="165" height="115" alt="Al's Beef Arabia" title="Al's Beef Arabia" />
+							</a>
+						</h1>			
+					</div>	
 					@include('public.partials._menu')
 				</div>
 
-				<div class="col-md-11">
+				<div class="col-md-10 col-xs-12">
 					<div class="als-main-content">
 						@yield('content')
 					</div>

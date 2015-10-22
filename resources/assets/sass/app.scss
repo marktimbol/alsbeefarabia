@@ -14,7 +14,7 @@ body {
 		background: white url('../../images/bg-subpage.jpg') bottom right no-repeat; //$subpageBackground;
 
 		.als-main-content {
-			margin-left: 46px;
+			//margin-left: 46px;
 		}
 
 		.social-icons {
@@ -37,14 +37,6 @@ body {
 	}
 }
 
-.pattern {
-	// width: 100%;
-	// height: 100%;
-	// background: url('../../images/pattern.png') repeat;
-	// opacity: .2;
-	// position: fixed;
-}
-
 .row-eq-height {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -64,10 +56,6 @@ header {
 	background: $headerStripeBackground;
 	height: 34px;
 	box-shadow: 2px 0px 3px #333;
-
-	h1 {
-		margin: 0;
-	}
 
 	nav {
 		&.top-nav {
@@ -90,9 +78,12 @@ header {
 	}
 }
 
+.logo {
+    margin-top: -55px;	
+}
+
 nav {
 	&.main-nav {
-		width: 113px;
 		background: $darkYellow;
 		margin-top: 10px;
 		ul {
@@ -107,9 +98,6 @@ nav {
 					font-weight: bold;
 					text-transform: uppercase;
 					padding: 8px 15px;
-					&:hover {
-						text-decoration: none;
-					}
 				}
 				&:nth-child(odd) {
 					background: $yellow;
@@ -117,6 +105,13 @@ nav {
 
 				&:nth-child(even) {
 					background: darken($yellow, 1%);
+				}
+
+				&:hover {
+					background: darken($yellow, 5%);
+					a {
+						text-decoration: none;
+					}
 				}
 			}
 		}
@@ -137,8 +132,8 @@ nav {
 }
 
 .als-main-content {
-    margin-top: -63px;
-    margin-left: 26px;	
+    //margin-top: -63px;
+    //margin-left: 26px;	
 
 	.featured-details {
 		h1 {
