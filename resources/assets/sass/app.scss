@@ -11,7 +11,7 @@ body {
 	background: black;
 
 	&.page {
-		background: url('../../images/restaurant_icons.png') repeat; //$subpageBackground;
+		background: white url('../../images/bg-subpage.jpg') bottom right no-repeat; //$subpageBackground;
 
 		.als-main-content {
 			margin-left: 46px;
