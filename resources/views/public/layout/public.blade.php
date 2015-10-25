@@ -8,7 +8,7 @@
 		<title>@yield('pageTitle') | Al's Beef Arabia</title>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="{{ elixir('css/public.css') }}" rel="stylesheet">
-
+		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
 		@yield('header_styles')
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
