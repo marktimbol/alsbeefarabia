@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="google-site-verification" content="5Asi2M7HHz9urL_aoP9B4FT2tHRALO7-qKUe5WMI1qA" />
 		<title>@yield('pageTitle') | Al's Beef Arabia</title>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="{{ elixir('css/public.css') }}" rel="stylesheet">
