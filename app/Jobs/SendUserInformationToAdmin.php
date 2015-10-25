@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Jobs\Job;
 use App\Mailers\AdminMailer;
+use App\Mailers\UserMailer;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
@@ -35,7 +36,7 @@ class SendUserInformationToAdmin extends Job implements SelfHandling, ShouldQueu
         $this->email = $email;
         $this->message = $message_content;   
 
-        $this->handle(new AdminMailer);
+        $this->handle(new AdminMailer, new UserMailer);
 
     }
 
@@ -44,7 +45,7 @@ class SendUserInformationToAdmin extends Job implements SelfHandling, ShouldQueu
      *
      * @return void
      */
-    public function handle(AdminMailer $mailer)
+    public function handle(AdminMailer $adminMailer, UserMailer $userMailer)
     {
 
         $user = [
@@ -54,6 +55,10 @@ class SendUserInformationToAdmin extends Job implements SelfHandling, ShouldQueu
             'message_content'   => $this->message
         ];
 
-        $mailer->contact( env('MAIL_FROM_ADDRESS'), $user);
+        $adminEmail = env('MAIL_FROM_ADDRESS');
+
+        $adminMailer->contact( $adminEmail, $user);
+
+        $userMailer->autoReply($this->email);
     }
 }

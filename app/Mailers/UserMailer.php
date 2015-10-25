@@ -6,13 +6,13 @@ use App\User;
 
 class UserMailer extends Mailer {
 
-	public function welcome(User $user) {
+	public function autoReply($email) {
 
-		$subject = 'Welcome';
-		$view = 'emails.welcome';
+		$subject = 'RE: Contact Us';
+		$view = 'emails.auto-reply';
 		$data = [];
 
-		$this->sendTo($user, $subject, $view, $data);
+		$this->sendTo($email, $subject, $view, $data);
 
 	}
 }
