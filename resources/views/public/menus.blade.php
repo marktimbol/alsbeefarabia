@@ -37,7 +37,7 @@
 
 				@foreach($categories as $category)
 
-					<div class="col col-md-3 col-xs-4">
+					<div class="col col-md-3 col-xs-6">
 						
 						<figure class="menus__menu wow fadeInLeft" data-wow-delay="0.{{$category->id+1}}s">
 							
