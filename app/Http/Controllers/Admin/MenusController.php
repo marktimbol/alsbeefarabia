@@ -64,9 +64,9 @@ class MenusController extends Controller
         /**
          * session('filename') => uploaded photo filename
          */
-        if( ! empty(session('filename' )) ) {
+        if( $request->has('featuredImage') ) {
 
-            $this->menu->addPhoto($menu->id, session('filename'));
+            $this->menu->addPhoto($menu->id, $request->featuredImage);
 
         }        
 
@@ -109,6 +109,12 @@ class MenusController extends Controller
     public function update(AddMenuRequest $request, $menu)
     {
         $this->menu->update($menu->id, $request->all());
+
+        if( $request->has('featuredImage') ) {
+
+            $this->menu->updatePhoto($menu->id, $request->featuredImage);
+
+        }        
 
         flash()->success('Yay!', 'You successfully updated the menu information.');
 

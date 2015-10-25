@@ -58,11 +58,10 @@ class MenuRepository implements MenuRepositoryInterface {
 		$menu = Menu::findOrFail($id);
 
 		$photo = new Photo;
+
 		$photo->path = $filename;
 
 		$menu->photos()->save($photo);
-
-		session(['filename' => '']);
 	}	
 
 	public function updatePhoto($id, $filename) {
@@ -78,17 +77,16 @@ class MenuRepository implements MenuRepositoryInterface {
 		$model = 'App\\'.$model;
 
 		$oldPhoto = Photo::where('imageable_type', $model)
-							->where('imageable_id', $id)->firstOrFail();
+							->where('imageable_id', $id)->firstOrFail()
+							->delete();
 
-		$oldPhotoPath = public_path('images/uploads/'.$oldPhoto->path);
+		// $oldPhotoPath = public_path('images/uploads/'.$oldPhoto->path);
 
-        if( File::isFile($oldPhotoPath) ) {
+  //       if( File::isFile($oldPhotoPath) ) {
 
-            File::delete( $oldPhotoPath );
+  //           File::delete( $oldPhotoPath );
 
-        }	
-
-        $oldPhoto->delete();
+  //       }	
 
 	}		
 

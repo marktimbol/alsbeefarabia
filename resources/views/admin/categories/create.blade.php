@@ -9,13 +9,16 @@
 				Add New Category
 			</h1>	
 			<div class="row">	
-				<div class="col-md-9">
-					<form method="POST"
-						id="addNewCategoryForm"
-						action="{{ route('admin.categories.store') }}"
-						enctype="multipart/form-data">
 
-						{!! csrf_field() !!}
+				<form method="POST"
+					id="addNewCategoryForm"
+					action="{{ route('admin.categories.store') }}"
+					enctype="multipart/form-data">
+
+					{!! csrf_field() !!}	
+							
+					<div class="col-md-9">
+
 
 						@include('errors.form')
 
@@ -32,7 +35,7 @@
 									{{ old('description') }}
 								</textarea>
 							</div>		
-	
+
 
 							<hr />
 
@@ -40,35 +43,25 @@
 								<button type="submit" class="btn btn-primary">Save Record</button>
 							</div>		
 						</div>
-					</form>
-				</div>
-
-				<div class="col-md-3">
-
-					<div class="panel panel-primary">
-						<div class="panel-heading">
-							<h3 class="panel-title">Set Featured Image</h3>
-						</div>					
-						<div class="panel-body">
-							<button type="button" class="btn" onclick="BrowseServer('selectedImage');">Browse Image</button>
-
-							<input id="selectedImage" />
-						</div>
+					
 					</div>
 
-					<div class="panel panel-primary">
-						<div class="panel-heading">
-							<h3 class="panel-title">Upload Photo</h3>
-						</div>					
-						<div class="panel-body">
-							<form class="dropzone" id="uploadPhotoForm" action="{{ route('admin.categories.photos.upload') }}">
-								{!! csrf_field() !!}
-								{!! method_field('PUT') !!}
-								<input type="hidden" name="category_id" value="" />
-							</form>
+					<div class="col-md-3">
+
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Set Featured Image</h3>
+							</div>					
+							<div class="panel-body">
+								<div id="featuredImageContainer"></div>
+								<div class="text-center">
+									<button type="button" class="btn" onclick="BrowseServer('featuredImage');">Browse Image</button>
+								</div>
+								<input type="hidden" name="featuredImage" id="featuredImage" />
+							</div>
 						</div>
-					</div>
-				</div>	
+					</div>	
+				</form>
 			</div>
 		</div>
 	</div>

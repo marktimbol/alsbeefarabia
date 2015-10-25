@@ -54,8 +54,6 @@ class SlideRepository implements SlideRepositoryInterface {
 
 	public function addPhoto($id, $filename) {
 
-		session(['filename' => '']);
-
 		$slide = $this->find($id);
 
 		$photo = new Photo;
@@ -80,18 +78,8 @@ class SlideRepository implements SlideRepositoryInterface {
 		$model = 'App\\'.$model;
 
 		$oldPhoto = Photo::where('imageable_type', $model)
-							->where('imageable_id', $id)->firstOrFail();
-
-		$oldPhotoPath = public_path('images/uploads/'.$oldPhoto->path);
-
-        if( File::isFile($oldPhotoPath) ) {
-
-            File::delete( $oldPhotoPath );
-
-        }	
-
-        $oldPhoto->delete();
-
+							->where('imageable_id', $id)->firstOrFail()
+							->delete();
 	}		
 
 }

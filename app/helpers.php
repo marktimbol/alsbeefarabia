@@ -28,7 +28,7 @@ function display($photos, $location = '') {
 
 			}
 
-				$html .= '<img src="'. asset('/images/uploads/'.$photo->path) .'" 
+				$html .= '<img src="'. asset($photo->path) .'" 
 						alt="'.$photo->imageable->name .'" 
 						title="'.$photo->imageable->name.'" 
 						class="img-responsive" />';

@@ -34,7 +34,7 @@
 								</textarea>
 							</div>		
 
-							<div class="row">
+{{-- 							<div class="row">
 								<div class="col-md-3">
 									<div class="form-group">
 										<label for="price">Price <span class="required">*</span></label>
@@ -44,7 +44,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 
 							<hr />
 
@@ -79,6 +79,19 @@
 
 						<div class="panel panel-primary">
 							<div class="panel-heading">
+								<h3 class="panel-title">Set Featured Image</h3>
+							</div>					
+							<div class="panel-body">
+								<div id="featuredImageContainer"></div>
+								<div class="text-center">
+									<button type="button" class="btn" onclick="BrowseServer('featuredImage');">Browse Image</button>
+								</div>
+								<input type="hidden" name="featuredImage" id="featuredImage" />
+							</div>
+						</div>						
+
+{{-- 						<div class="panel panel-primary">
+							<div class="panel-heading">
 								<h3 class="panel-title">Image</h3>
 							</div>					
 							<div class="panel-body">
@@ -89,7 +102,7 @@
 									Upload Photo
 								</a>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</form>
 
@@ -129,4 +142,6 @@
 		   ['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source']
 		] ;
 	</script>	
+
+	<script src="{{ elixir('js/filemanager.js') }}"></script>
 @endsection

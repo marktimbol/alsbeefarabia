@@ -31,19 +31,19 @@ class RouteServiceProvider extends ServiceProvider
     {
 
         Route::bind('category', function($category) {
-            return Category::with('menus')->whereSlug($category)->firstOrFail();
+            return Category::with('menus', 'photos')->whereSlug($category)->firstOrFail();
         });
 
         Route::bind('menu', function($menu) {
-            return Menu::with('categories')->whereSlug($menu)->firstOrFail();
+            return Menu::with('categories', 'photos')->whereSlug($menu)->firstOrFail();
         });
 
         Route::bind('categories', function($categories) {
-            return Category::with('menus')->findOrFail($categories);
+            return Category::with('menus', 'photos')->findOrFail($categories);
         });
 
         Route::bind('menus', function($menus) {
-            return Menu::with('categories')->findOrFail($menus);
+            return Menu::with('categories', 'photos')->findOrFail($menus);
         }); 
 
         Route::bind('stores', function($stores) {

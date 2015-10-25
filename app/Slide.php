@@ -8,7 +8,6 @@ class Slide extends Model
 {
     protected $fillable = ['order', 'link'];
 
-
     public function photos() {
 
     	return $this->morphMany(Photo::class, 'imageable');

@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('netWorth');
             $table->string('investmentTimeFrame');
             $table->string('desiredLocation');
+            $table->integer('isAdmin')->defalt(0);
             $table->rememberToken();
             $table->timestamps();
         });

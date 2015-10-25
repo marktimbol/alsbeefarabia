@@ -18,10 +18,12 @@ class AuthController extends Controller
 	public function postLogin(AuthLoginRequest $request) {	
 		$credentials = [
 			'email'	=> $request->email,
-			'password'	=> $request->password
+			'password'	=> $request->password,
+			'isAdmin'	=> 1
 		];
 
 		if( auth()->attempt($credentials, $request->remember) ) {
+			flash()->success('Yay!', 'Welcome back!');
 			return redirect()->intended('admin');
 		}
 

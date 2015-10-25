@@ -55,7 +55,7 @@ class CategoryRepository implements CategoryRepositoryInterface {
 
 	public function addPhoto($id, $filename) {
 
-		session(['filename' => '']);
+		//session(['filename' => '']);
 
 		$category = $this->find($id);
 
@@ -81,17 +81,16 @@ class CategoryRepository implements CategoryRepositoryInterface {
 		$model = 'App\\'.$model;
 
 		$oldPhoto = Photo::where('imageable_type', $model)
-							->where('imageable_id', $id)->firstOrFail();
+							->where('imageable_id', $id)->firstOrFail()
+							->delete();
 
-		$oldPhotoPath = public_path('images/uploads/'.$oldPhoto->path);
+		// $oldPhotoPath = public_path('images/uploads/'.$oldPhoto->path);
 
-        if( File::isFile($oldPhotoPath) ) {
+  //       if( File::isFile($oldPhotoPath) ) {
 
-            File::delete( $oldPhotoPath );
+  //           File::delete( $oldPhotoPath );
 
-        }	
-
-        $oldPhoto->delete();
+  //       }	
 
 	}	
 

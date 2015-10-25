@@ -54,12 +54,9 @@ class CategoriesController extends Controller
 
         $category = $this->category->store($request->all());
 
-        /**
-         * session('filename') => uploaded photo filename
-         */
-        if( ! empty(session('filename' )) ) {
+        if( $request->has('featuredImage') ) {
 
-            $this->category->addPhoto($category->id, session('filename'));
+            $this->category->addPhoto($category->id, $request->featuredImage);
 
         }
 
@@ -100,6 +97,12 @@ class CategoriesController extends Controller
     public function update(AddCategoryRequest $request, $category)
     {   
         $this->category->update($category->id, $request->all());
+
+        if( $request->has('featuredImage') ) {
+
+            $this->category->updatePhoto($category->id, $request->featuredImage);
+
+        }
 
         flash()->success('Yay!', 'You successfully updated the category information.');
 

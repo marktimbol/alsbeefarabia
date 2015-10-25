@@ -1,2 +1,18 @@
-!function(o,n,t){var i=o("html, body");o.CBPNTAccordion=function(n,t){this.$el=o(t),this._init(n)},o.CBPNTAccordion.defaults={},o.CBPNTAccordion.prototype={_init:function(n){this.options=o.extend(!0,{},o.CBPNTAccordion.defaults,n),this._config(),this._initEvents()},_config:function(){this.$items=this.$el.find(".cbp-nttrigger")},_initEvents:function(){this.$items.on("click.cbpNTAccordion",function(){var n=o(this).parent();n.hasClass("cbp-ntopen")?n.removeClass("cbp-ntopen"):(n.addClass("cbp-ntopen"),i.scrollTop(n.offset().top))})},destroy:function(){this.$items.off(".cbpNTAccordion").parent().removeClass("cbp-ntopen")}};var c=function(o){n.console&&n.console.error(o)};o.fn.cbpNTAccordion=function(n){if("string"==typeof n){var t=Array.prototype.slice.call(arguments,1);this.each(function(){var i=o.data(this,"cbpNTAccordion");return i?o.isFunction(i[n])&&"_"!==n.charAt(0)?void i[n].apply(i,t):void c("no such method '"+n+"' for cbpNTAccordion instance"):void c("cannot call methods on cbpNTAccordion prior to initialization; attempted to call method '"+n+"'")})}else this.each(function(){var t=o.data(this,"cbpNTAccordion");t?t._init():t=o.data(this,"cbpNTAccordion",new o.CBPNTAccordion(n,this))});return this}}(jQuery,window),$(document).ready(function(){$("#cbp-ntaccordion").cbpNTAccordion()});
+/**
+ * jquery.cbpNTAccordion.min.js v1.0.0
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2013, Codrops
+ * http://www.codrops.com
+ */
+(function(d,b,e){var c=d("html, body");d.CBPNTAccordion=function(f,g){this.$el=d(g);this._init(f)};d.CBPNTAccordion.defaults={};d.CBPNTAccordion.prototype={_init:function(f){this.options=d.extend(true,{},d.CBPNTAccordion.defaults,f);this._config();this._initEvents()},_config:function(){this.$items=this.$el.find(".cbp-nttrigger")},_initEvents:function(){this.$items.on("click.cbpNTAccordion",function(){var f=d(this).parent();if(f.hasClass("cbp-ntopen")){f.removeClass("cbp-ntopen")}else{f.addClass("cbp-ntopen");c.scrollTop(f.offset().top)}})},destroy:function(){this.$items.off(".cbpNTAccordion").parent().removeClass("cbp-ntopen")}};var a=function(f){if(b.console){b.console.error(f)}};d.fn.cbpNTAccordion=function(g){if(typeof g==="string"){var f=Array.prototype.slice.call(arguments,1);this.each(function(){var h=d.data(this,"cbpNTAccordion");if(!h){a("cannot call methods on cbpNTAccordion prior to initialization; attempted to call method '"+g+"'");return}if(!d.isFunction(h[g])||g.charAt(0)==="_"){a("no such method '"+g+"' for cbpNTAccordion instance");return}h[g].apply(h,f)})}else{this.each(function(){var h=d.data(this,"cbpNTAccordion");if(h){h._init()}else{h=d.data(this,"cbpNTAccordion",new d.CBPNTAccordion(g,this))}})}return this}})(jQuery,window);
+$(document).ready(function() {
+
+	$( '#cbp-ntaccordion' ).cbpNTAccordion();
+
+});
+
 //# sourceMappingURL=accordion.js.map

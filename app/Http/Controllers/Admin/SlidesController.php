@@ -52,15 +52,11 @@ class SlidesController extends Controller
      */
     public function store(Request $request)
     {
-
         $slide = $this->slide->store($request->all());
 
-        /**
-         * session('filename') => uploaded photo filename
-         */
-        if( ! empty(session('filename' )) ) {
+        if( $request->has('featuredImage') ) {
 
-            $this->slide->addPhoto($slide->id, session('filename'));
+            $this->slide->addPhoto($slide->id, $request->featuredImage);
 
         }
 
@@ -102,6 +98,12 @@ class SlidesController extends Controller
     public function update(Request $request, $slide)
     {
         $this->slide->update($slide->id, $request->all());
+
+        if( $request->has('featuredImage') ) {
+
+            $this->slide->updatePhoto($slide->id, $request->featuredImage);
+
+        }        
 
         flash()->success('Yay!', 'You successfully updated the slide information.');
 

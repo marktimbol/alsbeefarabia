@@ -4,7 +4,7 @@ function BrowseServer(obj)
 {
     urlobj = obj;
     OpenServerBrowser(
-          'http://alsbeefarabia.dev/admin/filemanager',
+          '/admin/filemanager',
           screen.width * 0.7,
           screen.height * 0.7
       ) ;
@@ -29,6 +29,10 @@ function setData( data )
       image = data[0];
       
       document.getElementById(urlobj).value = image.url;
+
+      document.getElementById("featuredImageContainer").innerHTML = '<img src='+image.url+' class="img-responsive" />';
   }
+
   oWindow = null;
+
 }

@@ -1,10 +1,10 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
-	$('.select-categories input').on('click', function() {
+// 	$('.select-categories input').on('click', function() {
 
-		$('#hidden_category_id').val($(this).val());
+// 		$('#hidden_category_id').val($(this).val());
 
-	});
+// 	});
 
-});
+// });
 
