@@ -55,8 +55,6 @@ class StoreRepository implements StoreRepositoryInterface {
 
 	public function addPhoto($id, $filename) {
 
-		session(['filename' => '']);
-
 		$store = $this->find($id);
 
 		$photo = new Photo;
@@ -79,18 +77,9 @@ class StoreRepository implements StoreRepositoryInterface {
 
 		$model = 'App\\'.$model;
 
-		$oldPhoto = Photo::where('imageable_type', $model)
-							->where('imageable_id', $id)->firstOrFail();
-
-		$oldPhotoPath = public_path('images/uploads/'.$oldPhoto->path);
-
-        if( File::isFile($oldPhotoPath) ) {
-
-            File::delete( $oldPhotoPath );
-
-        }	
-
-        $oldPhoto->delete();
+		Photo::where('imageable_type', $model)
+				->where('imageable_id', $id)->firstOrFail()
+				->delete();
 
 	}	
 

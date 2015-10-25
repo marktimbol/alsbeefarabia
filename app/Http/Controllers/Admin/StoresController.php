@@ -52,12 +52,9 @@ class StoresController extends Controller
     {
         $store = $this->store->store($request->all());
 
-        /**
-         * session('filename') => uploaded photo filename
-         */
-        if( ! empty(session('filename' )) ) {
+        if( $request->has('featuredImage') ) {
 
-            $this->store->addPhoto($store->id, session('filename'));
+            $this->store->addPhoto($store->id, $request->featuredImage);
 
         }
 
@@ -97,7 +94,14 @@ class StoresController extends Controller
      */
     public function update(AddStoreRequest $request, $store)
     {
+
         $this->store->update($store->id, $request->all());
+
+        if( $request->has('featuredImage') ) {
+
+            $this->store->updatePhoto($store->id, $request->featuredImage);
+
+        }
 
         flash()->success('Yay!', 'You successfully updated the store information.');
 
