@@ -2,6 +2,8 @@
 
 @section('pageTitle', 'Stores')
 
+@section('metaDescription', 'Als Beef Stores')
+
 @section('bodyClass', 'page')
 
 @section('content')

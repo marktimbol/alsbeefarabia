@@ -2,6 +2,8 @@
 
 @section('pageTitle', $menu->name)
 
+@section('metaDescription', strip_tags($menu->description))
+
 @section('header_styles')
 	<link rel="stylesheet" href="{{ elixir('css/carousel.css') }}" />
 @endsection

@@ -2,6 +2,8 @@
 
 @section('pageTitle', 'Home')
 
+@section('metaDescription', 'Oven roasted perfectly Italian seasoned beef tender and extremely lean sliced amazingly thin with original flavor')
+
 @section('header_styles')
 	<link rel="stylesheet" href="{{ elixir('css/carousel.css') }}" />
 @endsection

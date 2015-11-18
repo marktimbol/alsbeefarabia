@@ -2,6 +2,8 @@
 
 @section('pageTitle', $category->name)
 
+@section('metaDescription', strip_tags($category->description))
+
 @section('bodyClass', 'page')
 
 @section('content')

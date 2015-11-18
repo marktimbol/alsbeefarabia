@@ -2,6 +2,8 @@
 
 @section('pageTitle', 'About Us')
 
+@section('metaDescription', 'The Sandwich That Started It All  The history of Al’s #1 Italian Beef Restaurants dates back to 1938 when Al Ferrari and his sister and brother-in-law, Frances and Chris Pacelli, Sr., developed the original idea and recipe for the original Italian beef sandwich.')
+
 @section('bodyClass', 'page')
 
 @section('content')

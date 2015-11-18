@@ -2,6 +2,8 @@
 
 @section('pageTitle', 'Contact Us')
 
+@section('metaDescription', 'We look forward to hearing from you! We want to know your thoughts.')
+
 @section('header_styles')
     <link rel="stylesheet" href="{{ elixir('css/sweetalert.css') }}" />
 @endsection

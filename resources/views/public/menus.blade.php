@@ -2,6 +2,8 @@
 
 @section('pageTitle', "Discover Al's Italian Beef")
 
+@section('metaDescription', 'Oven roasted perfectly Italian seasoned beef tender and extremely lean sliced amazingly thin with original flavor')
+
 @section('bodyClass', 'page')
 
 @section('content')
