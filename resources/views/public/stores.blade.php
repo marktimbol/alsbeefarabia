@@ -23,7 +23,7 @@
 
 						@foreach($chunks as $store )
 					
-							<div class="store__photo wow fadeInLeft">
+{{-- 							<div class="store__photo wow fadeInLeft">
 
 								<div class="col-md-6 col p-r-0">
 						
@@ -31,26 +31,32 @@
 						
 								</div>
 
-							</div>
+							</div> --}}
 
 							<div class="store__info wow fadeInRight">
 							
-								<div class="col-md-6 col p-l-0">
+								<div class="col-md-6">
 							
 									<h3>{{ $store->name }}</h3>
 
 									{!! $store->description !!}
 
 									<ul>
+
 										<li>
-											<i class="fa fa-map-marker"></i>
-											{{ $store->address }}
+											<i class="fa fa-envelope"></i>
+											<a href="mailto:jumeirah@alsbeef.ae">jumeirah@alsbeef.ae</a>
 										</li>
 
 										<li>
 											<i class="fa fa-phone"></i>
 											{{ $store->contact }}
-										</li>																		
+										</li>
+
+										<li>
+											<i class="fa fa-map-marker"></i>
+											{{ $store->address }}
+										</li>																												
 									</ul>
 								</div>
 							

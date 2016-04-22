@@ -1,13 +1,13 @@
 {
-  "css/accordion.css": "css/accordion-bd0e9f8cd6.css",
-  "css/admin.css": "css/admin-d9935bfc70.css",
-  "css/carousel.css": "css/carousel-f2caaa60a9.css",
-  "css/public.css": "css/public-dd8ed3c3dd.css",
-  "css/sweetalert.css": "css/sweetalert-b5284eef24.css",
-  "js/accordion.js": "js/accordion-5518b123d0.js",
-  "js/admin.js": "js/admin-ce828eb9f2.js",
-  "js/carousel.js": "js/carousel-eeddfc8a1e.js",
-  "js/filemanager.js": "js/filemanager-390278bcbe.js",
-  "js/public.js": "js/public-090f8bb75d.js",
+  "css/accordion.css": "css/accordion-3d5acfdcd6.css",
+  "css/admin.css": "css/admin-d74a5ba4f9.css",
+  "css/carousel.css": "css/carousel-0b403336fb.css",
+  "css/public.css": "css/public-6e4fc21de2.css",
+  "css/sweetalert.css": "css/sweetalert-679ce70451.css",
+  "js/accordion.js": "js/accordion-aea3de6137.js",
+  "js/admin.js": "js/admin-f195650ae9.js",
+  "js/carousel.js": "js/carousel-2c6a79aebb.js",
+  "js/filemanager.js": "js/filemanager-6d27749e79.js",
+  "js/public.js": "js/public-a2f868a7cc.js",
   "js/sweetalert.js": "js/sweetalert-dcff6382ce.js"
 }
