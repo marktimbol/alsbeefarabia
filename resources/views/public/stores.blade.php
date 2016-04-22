@@ -35,7 +35,7 @@
 
 							<div class="store__info wow fadeInRight">
 							
-								<div class="col-md-6">
+								<div class="col-md-12">
 							
 									<h3>{{ $store->name }}</h3>
 
