@@ -6,7 +6,7 @@
         <meta name="description" content="@yield('metaDescription')">		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="google-site-verification" content="5Asi2M7HHz9urL_aoP9B4FT2tHRALO7-qKUe5WMI1qA" />
-		<title>@yield('pageTitle') | Al's Beef Arabia</title>
+		<title>@yield('pageTitle') | Al's Beef Dubai, UAE</title>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="{{ elixir('css/public.css') }}" rel="stylesheet">
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
